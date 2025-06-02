@@ -1,1 +1,1 @@
-# tech-fundings-data
+# tech-fundings
