@@ -1,4 +1,4 @@
-index,Company,Website,Region,Vertical,Funding_Amount_(USD),Funding_Stage,Funding_Date
+index,Company,Website,Region,Vertical,Funding_Amount_USD,Funding_Stage,Funding_Date
 1,Internxt,https://internxt.com/,Spain,Blockchain,278940,Seed,Jan-20
 2,Dockflow,https://dockflow.com,Belgium,Logistics,292244,Seed,Jan-20
 3,api.video,https://api.video,France,Developer APIs,300000,Seed,Jan-20
