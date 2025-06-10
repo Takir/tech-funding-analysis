@@ -157,6 +157,8 @@ The analysis reveals a dynamic and rapidly growing tech investment ecosystem, wi
 
 Overall, the project not only highlights key funding trends but also provides a scalable framework for analyzing similar datasets in the future.
 
-
+### Author 
+  - Takir Hossain
+  - Takirhos@gmail.com
 
 
