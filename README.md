@@ -1,4 +1,4 @@
-# 💸 Tech Fundings Analytics Project
+# Tech Company Fundings (2020-2021)
 
 ## 📁 Dataset
 
@@ -7,12 +7,12 @@ This dataset captures funding events for tech companies, including investment am
 
 ---
 
-## 🧼 Data Pipeline Summary
+## Data Pipeline Summary
 
-### ✅ Step 1: Data Cleaning (Azure Databricks)
-- Loaded raw `.csv` file into **Spark DataFrame**
-- Cleaned nulls, standardized formats (e.g., funding dates), and inferred schema
-- Converted Spark DataFrame to Pandas for graphing and intermediate analysis
+### Step 1: Data Cleaning (Azure Databricks)
+  - Loaded raw `.csv` file into **Spark DataFrame
+  - Cleaned nulls, standardized formats (e.g., funding dates, casting data), and inferred schema
+  - Converted Spark DataFrame to Pandas for graphing and intermediate analysis
 
 _📷 **Add screenshot of your Databricks notebook:**_  
 
