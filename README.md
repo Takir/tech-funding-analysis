@@ -10,14 +10,28 @@ The main objective is to showcase how cloud-based tools can be integrated effect
 This dataset contains up-to-date information about tech company fundings across the globe. It can be used to identify recent trends in tech companies and the investment space.The dataset contains information from January 2020 to 2021 for over 3500 company funding information. The data attributes include - index, company name, website, funding stage, funding date, funding amount in US Dollars, and the region.
 
 ### Tech Stacks
-
+- Microsoft Excel
 - Azure Databricks
-  - Data Cleaning
+- Azure Synapse
+- PowerBI
+
+### Data Analysis
+- I have used Python in Azure Databricks to
   - Loaded raw `.csv` file into **Spark DataFrame
+  - Run some advance Data Cleaning
   - Cleaned nulls, standardized formats (e.g., funding dates, casting data etc.), and inferred schema
   - Converted Spark DataFrame to Pandas for graphing and intermediate analysis
 
-_📷 **Add screenshot of your Databricks notebook:**_  
+##### Step 01: Packages, and basic Configuration Code to make a connection with azure client, and Storage. 
+![Screenshot 2025-06-07 215746](https://github.com/user-attachments/assets/4a8e19da-51f0-4d12-86fc-08f61a637a82)
+
+  - Mounted Path where data gets stored
+    
+ ![Screenshot 2025-06-07 215902](https://github.com/user-attachments/assets/3499837c-bad1-40ee-a025-d10bfbd2b964)
+ 
+  - Reading Raw data from storage
+    
+![Screenshot 2025-06-07 235238](https://github.com/user-attachments/assets/b2db0cbb-d294-4f65-8799-96d5e5a744c4)
 
 ---
 
