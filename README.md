@@ -15,41 +15,57 @@ This dataset contains up-to-date information about tech company fundings across 
 - Azure Synapse
 - PowerBI
 
-### Data Analysis
-- I have used Python in Azure Databricks to
+### Data Analysis (Azure DataBricks)
+- I have used Python in Azure Databricks with Pandas and PySpark to
   - Loaded raw `.csv` file into **Spark DataFrame
   - Run some advance Data Cleaning
   - Cleaned nulls, standardized formats (e.g., funding dates, casting data etc.), and inferred schema
   - Converted Spark DataFrame to Pandas for graphing and intermediate analysis
 
-##### Step 01: Packages, and basic Configuration Code to make a connection with azure client, and Storage. 
+##### Step 01: Configuration
+  - Packages, and basic Configuration Code to make a connection with azure client, and Storage. 
 ![Screenshot 2025-06-07 215746](https://github.com/user-attachments/assets/4a8e19da-51f0-4d12-86fc-08f61a637a82)
 
-  - Mounted Path where data gets stored
-    
+  - Mounted to storage account Path where data gets stored
  ![Screenshot 2025-06-07 215902](https://github.com/user-attachments/assets/3499837c-bad1-40ee-a025-d10bfbd2b964)
  
   - Reading Raw data from storage
-    
 ![Screenshot 2025-06-07 235238](https://github.com/user-attachments/assets/b2db0cbb-d294-4f65-8799-96d5e5a744c4)
 
----
+#### Step 2: Top Findings
+  - Top companies based on highest funding also top five regions and their total fundings in bn
+![Screenshot 2025-06-07 235640](https://github.com/user-attachments/assets/0a617587-2dd9-4163-a7d2-9bac8cbc8c7f)
 
-### ✅ Step 2: Data Analysis
-- Used **Pandas** and **Spark SQL** for:
-  - Funding trends by year
-  - Top verticals by total funding and number of deals
-  - Regional breakdown of funding events
-  - Stage-wise investment comparisons
+  - Top fundings based on year and verticals(type of companies)
+![Screenshot 2025-06-07 235712](https://github.com/user-attachments/assets/372f53ee-e5ae-40d9-a035-3f40d3155f9f)
 
----
+  -Top three companies with their total Investment count and stage of Investment in 2020-2021
+![Screenshot 2025-06-10 141054](https://github.com/user-attachments/assets/473e5360-973b-4e41-b78e-81625c5acaac)
 
-### ✅ Step 3: SQL Analytics (Azure Synapse)
-- Registered cleaned dataset in **Synapse SQL**
-- Wrote T-SQL queries for aggregations (e.g., `SUM`, `COUNT`, `GROUP BY`, `ORDER BY`)
-- Generated result sets for Power BI consumption (verticals, years, regions, stages)
+  - Top companies and their total Investment in a bar chart using matplot library
+![Screenshot 2025-06-09 225506](https://github.com/user-attachments/assets/8e7f0cde-e15f-429e-b870-394fc5784f18)
 
----
+  - Transfer cleaned dataset to transformed data folder located in azure storage account
+    ![Screenshot 2025-06-08 002103](https://github.com/user-attachments/assets/3be28882-bc83-45a9-b71d-82d5d556b78c)
+    
+
+#### SQL Analytics (Azure Synapse)
+    - Created azure synapse workspace and connected it with transfromed data in azure storage account
+    - Registered cleaned dataset in Synapse SQL from data lek gen 2
+    - Wrote SQL queries for aggregations (e.g., `SUM`, `COUNT`, `GROUP BY`, `ORDER BY`)
+      - To find graphs for better understanding.
+    - Generated result sets for Power BI consumption (verticals, years, regions, stages)
+
+  - Top ten companise based on their total funding amount which shows, B2B software companies from US and Middle east are investing higest amount in 2020, mostly in their seed stage
+![Screenshot 2025-06-10 143257](https://github.com/user-attachments/assets/f2d64896-6583-4e75-aa0b-526782d81485)
+    - Adding a graph for better understanding
+![Screenshot 2025-06-10 143921](https://github.com/user-attachments/assets/7e423aa0-3417-4a63-a024-9c163f7bd57b)
+
+  - This graph shows the total funding of top ten companies in this dataset, where WestConnex invested the highest around 16 billion. This amount is almost 6 times higer than the SpaceX which in the second position in investment just bellow 2.5 billion of Investment in 2020
+![Screenshot 2025-06-08 015547](https://github.com/user-attachments/assets/388d8bf7-8547-43fe-8237-425a4356cac4)
+
+  - Here is a regional catch based on total Investment. It shows United States Invested the most among tech companies and
+![Screenshot 2025-06-08 015627](https://github.com/user-attachments/assets/5aac24e6-e8f1-423a-8630-6b6214d7ef40)
 
 ### ✅ Step 4: Power BI Dashboard
 - Connected **Power BI Desktop** to Synapse SQL views
