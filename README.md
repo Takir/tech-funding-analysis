@@ -1,17 +1,20 @@
 # Tech Company Fundings (2020-2021)
 
-## 📁 Dataset
+### About This Project
+This project involves analyzing a comprehensive tech funding dataset to uncover trends and insights within the startup and investment ecosystem.
+The main objective is to showcase how cloud-based tools can be integrated effectively for end-to-end data analysis, from data ingestion to visualization.The project aims to answer important questions such as how funding patterns evolve over time, the impact of company regions on funding, favored industry categories among investors, and overall funding distribution across different sectors.
+
+### Dataset
 
 **File Name:** `tech_fundings.csv`  
-This dataset captures funding events for tech companies, including investment amounts, industry verticals, funding stages, regions, and dates.
+This dataset contains up-to-date information about tech company fundings across the globe. It can be used to identify recent trends in tech companies and the investment space.The dataset contains information from January 2020 to 2021 for over 3500 company funding information. The data attributes include - index, company name, website, funding stage, funding date, funding amount in US Dollars, and the region.
 
----
+### Tech Stacks
 
-## Data Pipeline Summary
-
-### Step 1: Data Cleaning (Azure Databricks)
+- Azure Databricks
+  - Data Cleaning
   - Loaded raw `.csv` file into **Spark DataFrame
-  - Cleaned nulls, standardized formats (e.g., funding dates, casting data), and inferred schema
+  - Cleaned nulls, standardized formats (e.g., funding dates, casting data etc.), and inferred schema
   - Converted Spark DataFrame to Pandas for graphing and intermediate analysis
 
 _📷 **Add screenshot of your Databricks notebook:**_  
