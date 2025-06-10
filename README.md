@@ -6,14 +6,29 @@ The main objective is to showcase how cloud-based tools can be integrated effect
 
 ### Dataset
 
-**File Name:** `tech_fundings.csv`  
+**File Name: tech_fundings.csv  
 This dataset contains up-to-date information about tech company fundings across the globe. It can be used to identify recent trends in tech companies and the investment space.The dataset contains information from January 2020 to 2021 for over 3500 company funding information. The data attributes include - index, company name, website, funding stage, funding date, funding amount in US Dollars, and the region.
 
-### Tech Stacks
-- Microsoft Excel
-- Azure Databricks
-- Azure Synapse
-- PowerBI
+###  Columns Description
+
+| Column Name       | Description                                                   |
+|-------------------|---------------------------------------------------------------|
+| company           | Name of the funded startup or company                         |
+| Funding_Amount_USD| Amount of funding received in US Dollars                      |
+| Region            | Geographic region where the company is based or funded        |
+| Funding_Stage     | Stage of funding (e.g., Seed, Series A, Series B, etc.)       |
+| Funding_date      | Date of the funding event (format: YYYY-MM-DD)                |
+| Vertical          | Industry or category the company operates in (e.g., Fintech)  |
+
+## Tools & Technologies Used
+
+| Tool            | Purpose                                  |
+|-----------------|------------------------------------------|
+| MS Excel        | Bacsic data cleaning and col formation   |
+| Azure Databricks| Data cleaning, Spark & Pandas analysis   |
+| Azure Synapse   | SQL querying and table creation          |
+| Power BI        | Dashboard and visualization              |
+| Pandas / Matplotlib | Intermediate plots and EDA           |
 
 ### Data Analysis (Azure DataBricks)
 - I have used Python in Azure Databricks with Pandas and PySpark to
@@ -99,78 +114,49 @@ This dataset contains up-to-date information about tech company fundings across 
 Power BI Dashboard:
 ![Screenshot 2025-06-10 002256](https://github.com/user-attachments/assets/2be4f03a-4a09-4b35-819c-e2edd7caf15a) 
 
----
 
-## 🖼 Dashboard & Visualizations
+### Key findings 
+  - Funding Trends Over Time
+There has been a noticeable increase in funding activity in 2021 among most of the companies. This indicates growing interest in the tech startup ecosystem overtime.
 
-### 🔹 1. Funding Over Time (Line Chart)
-_📷 Add your screenshot here:_  
+  - Dominant Investment Categories
+Categories like Business to Business Software,Cloud Computing , E-Commerce, and cyber security verticals consistently received higher funding amounts, suggesting strong investor confidence in these sectors.
 
----
+  - Geographical Insights
+Startups based in USA, India, and UK attracted the most funding.
 
-### 🔹 2. Top 10 Verticals by Total Funding (Bar Chart)
-_📷 Add your screenshot here:_  
+  - Investor Behavior
+Most investors prefer early-stage funding rounds (e.g., Seed, Series A amd Series B), showing a trend toward backing startups in their growth phase.
 
----
+  - Average Deal Size
+Later-stage funding rounds (Series C and above) had significantly higher average deal sizes, often 5–10x that of seed rounds.
 
-### 🔹 3. Funding by Region (Map or Bar)
-_📷 Add your screenshot here:_  
+  - Funding Gaps
+Certain sectors, such as AgriTech and CleanTech, received comparatively less funding, highlighting potential areas for untapped investment.
 
----
 
-### 🔹 4. Funding Stage Distribution (Pie or Column)
-_📷 Add your screenshot here:_  
+### Challenges & Limitations
+  - Incomplete or Missing Data
+Several entries had missing fields (e.g., investor names, funding amounts, or locations), which limited the depth of       some analyses.
+    - Dataset could have included some more data like profit margin, cities, profit and loss which limits in-depth         analysis of some major analysis.
+    - There’s only two years of data included in this dataset, which is not enough to analyze and find the closest         future prediction.
+  - Lack of resources
+As this project was built using free subscription, azure connection and finding storage to build the cluster. 
+  - Currency & Inflation Adjustments
+The dataset does not standardize currency or adjust for inflation, which may slightly skew cross-year or cross-country comparisons.
+  - Lack of Company Lifecycle Data
+The dataset does not include whether startups failed, scaled, or were acquired, which would provide richer context for funding success.
+Unstructured Categories
+  - Static Dataset
+As the data is not real-time, it may not reflect the latest market conditions or trends post-2025 or later.
 
----
+### Conclusion
+This project successfully demonstrates how modern data tools like Azure Databricks, Azure Synapse Analytics, and Power BI can be integrated to uncover meaningful insights from tech funding data. Through systematic data cleaning, advanced SQL analysis, and interactive visualizations, we were able to identify clear trends in investor behavior, dominant sectors, regional funding patterns, and potential gaps in the funding landscape.
 
-## 📊 Columns Description
+The analysis reveals a dynamic and rapidly growing tech investment ecosystem, with a noticeable surge in activity during 2021. Investors show strong interest in sectors like B2B software, Cloud Computing, and Cybersecurity, while regions such as the USA, India, and the UK continue to lead in attracting capital. Meanwhile, less-funded areas like AgriTech and CleanTech present future opportunities for investment and innovation.
 
-| Column Name         | Description                                                   |
-|---------------------|---------------------------------------------------------------|
-| `company`           | Name of the funded startup or company                         |
-| `Funding_Amount_USD`| Amount of funding received in US Dollars                      |
-| `Region`            | Geographic region where the company is based or funded        |
-| `Funding_Stage`     | Stage of funding (e.g., Seed, Series A, Series B, etc.)       |
-| `Funding_date`      | Date of the funding event (format: YYYY-MM-DD)                |
-| `Vertical`          | Industry or category the company operates in (e.g., Fintech)  |
+Overall, the project not only highlights key funding trends but also provides a scalable framework for analyzing similar datasets in the future.
 
----
 
-## 🧠 Key Insights
 
-- **Top Verticals**: Fintech, Healthtech, and AI dominate investor interest
-- **Peak Funding Years**: 2019 and 2021 saw the highest capital inflow
-- **Regional Hotspots**: North America leads, followed by Europe and APAC
-- **Stage Trends**: Series A and Seed are the most frequent funding stages
-
----
-
-## 🛠 Tools & Technologies Used
-
-| Tool            | Purpose                                  |
-|-----------------|------------------------------------------|
-| Azure Databricks| Data cleaning, Spark & Pandas analysis   |
-| Azure Synapse   | SQL querying and table creation          |
-| Power BI        | Dashboard and visualization              |
-| Pandas / Matplotlib | Intermediate plots and EDA           |
-
----
-
-## 📂 File Structure
-tech-fundings-project/
-├── tech_fundings.csv
-├── notebooks/
-│ └── databricks_analysis.ipynb # Spark & pandas analysis
-├── synapse/
-│ └── tech_funding_queries.sql # Final SQL queries for insights
-├── dashboard/
-│ └── tech_funding_dashboard.pbix
-├── images/
-│ ├── databricks_notebook.png
-│ ├── powerbi_dashboard.png
-│ ├── funding_over_time.png
-│ ├── top_verticals.png
-│ ├── regional_funding.png
-│ └── funding_stage_distribution.png
-└── README.md
 
