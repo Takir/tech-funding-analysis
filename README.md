@@ -46,15 +46,15 @@ This dataset contains up-to-date information about tech company fundings across 
 ![Screenshot 2025-06-09 225506](https://github.com/user-attachments/assets/8e7f0cde-e15f-429e-b870-394fc5784f18)
 
   - Transfer cleaned dataset to transformed data folder located in azure storage account
-    ![Screenshot 2025-06-08 002103](https://github.com/user-attachments/assets/3be28882-bc83-45a9-b71d-82d5d556b78c)
+![Screenshot 2025-06-08 002103](https://github.com/user-attachments/assets/3be28882-bc83-45a9-b71d-82d5d556b78c)
     
 
 #### SQL Analytics (Azure Synapse)
-    - Created azure synapse workspace and connected it with transfromed data in azure storage account
-    - Registered cleaned dataset in Synapse SQL from data lek gen 2
-    - Wrote SQL queries for aggregations (e.g., `SUM`, `COUNT`, `GROUP BY`, `ORDER BY`)
-      - To find graphs for better understanding.
-    - Generated result sets for Power BI consumption (verticals, years, regions, stages)
+  - Created azure synapse workspace and connected it with transfromed data in azure storage account
+  - Registered cleaned dataset in Synapse SQL from data lek gen 2
+  - Wrote SQL queries for aggregations (e.g., `SUM`, `COUNT`, `GROUP BY`, `ORDER BY`)
+    - To find graphs for better understanding.
+  - Generated result sets for Power BI consumption (verticals, years, regions, stages)
 
   - Top ten companise based on their total funding amount which shows, B2B software companies from US and Middle east are investing higest amount in 2020, mostly in their seed stage
 ![Screenshot 2025-06-10 143257](https://github.com/user-attachments/assets/f2d64896-6583-4e75-aa0b-526782d81485)
@@ -64,18 +64,40 @@ This dataset contains up-to-date information about tech company fundings across 
   - This graph shows the total funding of top ten companies in this dataset, where WestConnex invested the highest around 16 billion. This amount is almost 6 times higer than the SpaceX which in the second position in investment just bellow 2.5 billion of Investment in 2020
 ![Screenshot 2025-06-08 015547](https://github.com/user-attachments/assets/388d8bf7-8547-43fe-8237-425a4356cac4)
 
-  - Here is a regional catch based on total Investment. It shows United States Invested the most among tech companies and
-![Screenshot 2025-06-08 015627](https://github.com/user-attachments/assets/5aac24e6-e8f1-423a-8630-6b6214d7ef40)
+  - Here is a regional catch based on total Investment. It shows United States Invested the most among tech companies and India as a region gradually improving their tech investment significatly.
+![Screenshot 2025-06-08 015842](https://github.com/user-attachments/assets/ad714109-298f-43dd-b438-88a8fd05f034)
 
-### ✅ Step 4: Power BI Dashboard
-- Connected **Power BI Desktop** to Synapse SQL views
+  - List of companies Investted 3 and more times during this time are shown in this scatter flot with their mane highest to lowest.
+![Screenshot 2025-06-08 015747](https://github.com/user-attachments/assets/dbba472a-d3db-4756-a499-2c492959ab00)
+
+  - Table shows the number of deals for top verticals, and their total Investmet during this time.
+![Screenshot 2025-06-08 020033](https://github.com/user-attachments/assets/2f7334cb-6d5e-4be2-beeb-2752efef6ed5)
+
+  - Following graph represents the yearly funding trends in 2020 and 2021. Where clearly shows that Investment in tech industries vastly increased in 2021. 
+![Screenshot 2025-06-10 152839](https://github.com/user-attachments/assets/fe083c73-e3fd-4818-8940-af826c7ccad6)
+
+  - The table bellow shows that companies are more likely investment in series A, seed, and series B stage over other funding stage for the company.
+![Screenshot 2025-06-08 185603](https://github.com/user-attachments/assets/ea257419-20b3-45f1-bf53-e8ed9ec21cac)
+
+  - Bellow line chart shows top verticals in each regions by total investment amount. From this we can say most investmeted companies are coming from region in the west like America, UK, and Australia etc.
+![Screenshot 2025-06-08 185711](https://github.com/user-attachments/assets/f74b3df3-0784-403b-8d1e-4fd01b7f63de)
+
+  - Scatter view shows that the number of deals maked by company types. It is clear that tech industries based on B2B software, cloud computing, And developing artifical intelligence were on top in terms of more deals making and investment for their development.
+![Screenshot 2025-06-09 231600](https://github.com/user-attachments/assets/cbb5888a-cfcb-4191-b3d9-3ee0aab1a35e)
+
+### Power BI Dashboard
+- Connected Power BI Desktop to Azure Synapse Analytics to
 - Created interactive visualizations:
-  - 📈 Line chart: Funding over time
-  - 📊 Bar chart: Top 10 Verticals by total funding
-  - 🧭 Map: Regional funding distribution
-  - 🧩 Filters: Funding Stage, Year, Region
+  There are some important analysis from this board are listed bellow
+  -  Pie chart: Average Funding over time(Quaterly)
+  -  Bar chart: Number of companies by vertical, also total funding by vartical
+  -  Donut chart: Total fundings by stage
+  -  Matrix: region wise companies and their name along with total funding 
+  -  Q/A for question and answer session
+  -  Filters: Total funding, Year, Region, investment count, also investment average 
 
-_📷 **Add screenshot of full Power BI Dashboard:**_  
+Power BI Dashboard:
+![Screenshot 2025-06-10 002256](https://github.com/user-attachments/assets/2be4f03a-4a09-4b35-819c-e2edd7caf15a) 
 
 ---
 
